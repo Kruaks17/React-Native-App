@@ -2,6 +2,9 @@ import { StatusBar } from 'expo-status-bar';
 import React, {useState} from 'react';
 import { StyleSheet, Text, View, Header } from 'react-native';
 
+import Main from './components/Main';
+
+
 export default function App() {
 
   const [item, setItem]= useState([]);
@@ -13,18 +16,18 @@ export default function App() {
 
 
   return (
-    <>
-    
+    <Main>
     <View style={styles.container}>
-    
-    </View>
-    </>
+        
+    </View> 
+    </Main>
   );
 }
 const styles = StyleSheet.create({
+  
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#E3D0CA',
     alignItems: 'center',
     justifyContent: 'center',
   },
