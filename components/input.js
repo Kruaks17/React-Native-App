@@ -11,7 +11,6 @@ const Input = (props) => {
         addItem(value)
         setValue("");
     };
-
     return (
         <View style={styles.container}> 
             <TextInput style={styles.input} placeholder="Legg til gjøre mål"

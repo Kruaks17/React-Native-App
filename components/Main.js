@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, Header, TouchableOpacity, Linking } from 'react-native';
+import { StyleSheet, Text, View, CheckBox, TouchableOpacity, } from 'react-native';
 import Input from './input';
 import Item from './item';
-
+import Dropdown from './dropdown';
 
 const Main = () => {
 
@@ -12,29 +12,31 @@ const Main = () => {
         setItems([...items, item])
     };
     const handleRemove = (index) => {
-        setTodos(item.filter((item, x) => {
+        setItems(item.filter((item, x) => {
             return index !== x;
         })
         );
     };
-
     return (
         <View style={styles.container}>
             <View style={styles.header}>
-                <Text style={styles.headerText}> Uppered </Text>
-            </View>
 
+                <Text style={styles.headerText}> Uppered </Text>
+                <div>
+                    <Dropdown />
+                </div>
+            </View>
             <View style={styles.list}>
                 <Input addItem={addItem} />
                 {items.map((item, index) => {
                     return (
                         <>
+
                             <Item
                                 item={item}
                                 index={index}
                             />
-                            <TouchableOpacity removeItem={handleRemove}/>
-                               
+                            <TouchableOpacity removeItem={handleRemove} />
                         </>
                     )
 
@@ -64,7 +66,8 @@ const styles = StyleSheet.create({
     },
     headerText: {
         fontFamily: 'RadioGrotesk-Regular',
-        fontSize: 70,
+        fontSize: 40,
+        justifyContent: 'flex-end', 
     },
     list: {
         justifyContent: 'center',
