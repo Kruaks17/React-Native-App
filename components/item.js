@@ -3,12 +3,9 @@ import { StyleSheet, Text, CheckBox, TouchableOpacity, View } from 'react-native
 
 const Item = (props) => {
 
-    const { item, index, removeItem } = props
+    const { item, index, removeItem } = props;
     const [isSelected, setSelection] = useState(false);
-    const [checked, setChecked] = useState(false);
     
-    
-
     return (
 
         <View style={styles.container}>
@@ -18,7 +15,7 @@ const Item = (props) => {
                 style={styles.checkbox}
             />
             <Text style={styles.item} 
-            >{item}{isSelected ? "-" : ""}</Text>
+            >{item}</Text>
             <TouchableOpacity onPress={() => {
                 removeItem(index)
             }}>

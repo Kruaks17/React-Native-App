@@ -12,7 +12,7 @@ const Main = () => {
         setItems([...items, item])
     };
     const handleRemove = (index) => {
-        setItems(item.filter((item, x) => {
+        setItems(items.filter((items, x) => {
             return index !== x;
         })
         );
@@ -31,7 +31,6 @@ const Main = () => {
                 {items.map((item, index) => {
                     return (
                         <>
-
                             <Item
                                 item={item}
                                 index={index}
@@ -67,7 +66,7 @@ const styles = StyleSheet.create({
     headerText: {
         fontFamily: 'RadioGrotesk-Regular',
         fontSize: 40,
-        justifyContent: 'flex-end', 
+        justifyContent: 'flex-end',
     },
     list: {
         justifyContent: 'center',
