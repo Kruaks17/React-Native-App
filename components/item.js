@@ -1,21 +1,16 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, CheckBox, TouchableOpacity, View } from 'react-native';
+import { TouchableOpacity } from 'react-native';
+import Container from '../style-components/container/index';
+import Title from '../style-components/title/index';
 
 const Item = (props) => {
 
     const { item, index, removeItem } = props;
-    const [isSelected, setSelection] = useState(false);
-    
-    return (
 
-        <View style={styles.container}>
-            <CheckBox
-                value={isSelected}
-                onValueChange={setSelection}
-                style={styles.checkbox}
-            />
-            <Text style={styles.item} 
-            >{item}</Text>
+    return (
+        <Container>
+            <Title
+            >{item}</Title>
             <TouchableOpacity onPress={() => {
                 removeItem(index)
             }}>
@@ -28,31 +23,9 @@ const Item = (props) => {
                     <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
                 </svg>
             </TouchableOpacity>
-            
-        </View>
+        </Container>
     )
 }
 
-const styles = StyleSheet.create({
 
-    container: {
-        flex: 2,
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-    checkbox:{
-        borderRadius:50,
-        color: 'blue',
-    },
-    item: {
-        marginRight: 50,
-        fontSize: 20,
-        fontFamily: 'Telegraf-Regular',
-        alignItems: 'center',
-        justifyContent: 'center',
-
-    }
-
-});
 export default Item;

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, TextInput, TouchableOpacity, View } from 'react-native';
 
 
 const Input = (props) => {
@@ -32,7 +32,7 @@ const Input = (props) => {
 const styles = StyleSheet.create({
 
     container:{
-        flex: 2,
+        flex: 1,
         flexDirection: 'row',
         justifyContent:'center',
         alignItems:'center',
@@ -46,7 +46,8 @@ const styles = StyleSheet.create({
         borderRadius: 50,
         fontFamily:'Telegraf-Regular',  
         fontSize:20,
-        textAlign: 'center'
+        textAlign: 'center',
+        width: 250
     },
     placeholder:{
         justifyContent: 'center',
