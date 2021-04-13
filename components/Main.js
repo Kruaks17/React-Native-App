@@ -2,7 +2,10 @@ import React, { useState } from 'react';
 import { StyleSheet, Text, View, CheckBox, TouchableOpacity, } from 'react-native';
 import Input from './input';
 import Item from './item';
-import Dropdown from './dropdown';
+import List from '../style-components/list/index';
+import Header from '../style-components/header/index';
+
+import HeaderText from '../style-components/Pagetitle';
 
 const Main = () => {
 
@@ -19,14 +22,10 @@ const Main = () => {
     };
     return (
         <View style={styles.container}>
-            <View style={styles.header}>
-
-                <Text style={styles.headerText}> Uppered </Text>
-                <div>
-                    <Dropdown />
-                </div>
-            </View>
-            <View style={styles.list}>
+            <Header>
+                <HeaderText> Uppered </HeaderText>
+            </Header>
+            <List>
                 <Input addItem={addItem} />
                 {items.map((item, index) => {
                     return (
@@ -38,10 +37,9 @@ const Main = () => {
                             <TouchableOpacity removeItem={handleRemove} />
                         </>
                     )
-
                 })}
 
-            </View>
+            </List>
 
             <View style={styles.footer}>
             </View>
@@ -56,24 +54,9 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#E3D0CA',
     },
-    header: {
-        position: 'sticky',
-        alignItems: 'center',
-        justifyContent: 'center',
-        padding: 30,
-        marginTop: 20,
-    },
-    headerText: {
-        fontFamily: 'RadioGrotesk-Regular',
-        fontSize: 40,
-        justifyContent: 'flex-end',
-    },
-    list: {
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontFamily: 'Telegraf-Regular',
-        fontSize: 20,
-    }
+
+
+
 
 });
 
