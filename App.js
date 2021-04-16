@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import AppLoading from 'expo-app-loading';
 import { useFonts } from 'expo-font';
 import Main from './components/Main';
-import styled from 'styled-components/native';
 
 export default function App() {
   let [fontsLoaded] = useFonts({

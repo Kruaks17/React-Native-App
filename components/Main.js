@@ -6,6 +6,7 @@ import List from '../style-components/list/index';
 import Header from '../style-components/header/index';
 
 import HeaderText from '../style-components/Pagetitle';
+import Title from '../style-components/title';
 
 const Main = () => {
 
@@ -32,16 +33,16 @@ const Main = () => {
                         <>
                             <Item
                                 item={item}
-                                index={index}
-                            />
+                                index={index}/>
                             <TouchableOpacity removeItem={handleRemove} />
                         </>
                     )
                 })}
-
             </List>
-
             <View style={styles.footer}>
+                <Title>
+                    
+                </Title>
             </View>
         </View>
 
