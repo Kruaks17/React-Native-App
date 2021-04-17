@@ -17,13 +17,21 @@ const Input = (props) => {
                 onChangeText={(text) => { setValue(text) }} value={value}>
             </TextInput>
             <TouchableOpacity style={styles.touch} onPress={handleAddItem}>
-            <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-circle-plus" 
-            width="54" height="54" viewBox="0 0 24 24" stroke-width="1.5" stroke="black" fill="none" 
-            stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-            <circle cx="12" cy="12" r="9" />
-            <line x1="9" y1="12" x2="15" y2="12" />
-            <line x1="12" y1="9" x2="12" y2="15" />
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="54"
+                height="54"
+                fill="none"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="1.5"
+                viewBox="0 0 24 24"
+                >
+                <path stroke="none" d="M0 0h24v24H0z"></path>
+                <circle cx="12" cy="12" r="9"></circle>
+                <path d="M9 12L15 12"></path>
+                <path d="M12 9L12 15"></path>
             </svg>
             </TouchableOpacity>
         </View>

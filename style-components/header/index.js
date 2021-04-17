@@ -6,7 +6,7 @@ const Header = styled.View`
     justify-content: flex-end;
     align-items: center;
 
-    font-size: 20px;
+    font-size: 5y0px;
 
     padding: 10px;
 
