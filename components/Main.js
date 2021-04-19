@@ -1,6 +1,5 @@
-import React, { useState,useEffect } from 'react';
-import { StyleSheet, Text, View, CheckBox, TouchableOpacity, } from 'react-native';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import React, { useState } from 'react';
+import { StyleSheet, View,  } from 'react-native';
 
 import Input from './input';
 import Item from './item';
@@ -12,7 +11,6 @@ import Title from '../style-components/title';
 const Main = () => {
 
     const [items, setItems] = useState([]);
-    const [itemList, setItemList] =useState([]);
 
     const addItem = (item) => {
         setItems([...items, item])
@@ -23,34 +21,6 @@ const Main = () => {
         })
         );
     };
-    const STORAGE_KEY = "items";
-
-    useEffect(()=>{
-        const getData = async () =>{
-            try {
-                const jsonValue = await AsyncStorage.getItem(STORAGE_KEY);
-                if(jsonValue != null){
-                    const parsedJson = JSON.parse(jsonValue);              }
-                    setItemList(parsedJson);
-            } catch (error) {
-                console.log(error, "Fuck dette var feil");
-            }
-        };
-        getData();
-    },[]);
-
-    useEffect(()=>{
-        const storeData = async (value) => {
-            try {
-                const jsonValue = JSON.stringify(value);
-                await AsyncStorage.setItem(STORAGE_KEY, jsonValue);
-                
-            } catch (error) {
-                console.log(error);
-            }
-        }
-        storeData(itemList);
-    }, [itemList]);
     return (
         <View style={styles.container}>
             <Header>
@@ -70,9 +40,6 @@ const Main = () => {
                 })}
             </List>
             <View style={styles.footer}>
-                <Title>
-                    
-                </Title>
             </View>
         </View>
 
@@ -85,10 +52,6 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#E3D0CA',
     },
-
-
-
-
 });
 
 export default Main;

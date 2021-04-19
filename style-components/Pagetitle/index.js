@@ -2,7 +2,7 @@ import styled from 'styled-components/native';
 
 const HeaderText = styled.Text`
 
-    font-size: 40px;
+    font-size: 50px;
     font-family: 'RadioGrotesk-Bold';
 `;
 

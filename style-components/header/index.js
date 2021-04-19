@@ -3,10 +3,10 @@ import styled from "styled-components/native";
 const Header = styled.View`
 
     display:flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
 
-    font-size: 5y0px;
+    font-size: 60px;
 
     padding: 10px;
 
