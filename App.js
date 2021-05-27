@@ -3,8 +3,6 @@ import AppLoading from 'expo-app-loading';
 import { useFonts } from 'expo-font';
 import Main from './components/Main';
 
-
-
 export default function App() {
   let [fontsLoaded] = useFonts({
     'RadioGrotesk-Bold': require('./assets/fonts/RadioGrotesk-Bold.otf'),
