@@ -10,7 +10,7 @@ const List = styled.View`
     font-size: 30px;
     font-family: 'RadioGrotesk-Regular';
     
-    padding:40px;
+    padding:50px;
 
 `;
 export default List;

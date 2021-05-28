@@ -6,7 +6,7 @@ import Item from './item';
 import List from '../style-components/list/index';
 import Header from '../style-components/header/index';
 import HeaderText from '../style-components/Pagetitle';
-import Title from '../style-components/title';
+
 
 const Main = () => {
 
@@ -14,6 +14,7 @@ const Main = () => {
 
     const addItem = (item) => {
         setItems([...items, item])
+
     };
     const handleRemove = (index) => {
         setItems(items.filter((items, x) => {
