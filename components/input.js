@@ -15,11 +15,11 @@ const Input = (props) => {
     
     return (
         <Container>
-            <TextInput style={styles.input} placeholder="Legg til gjøre mål"
+            <TextInput style={styles.input} placeholder="Legg til i listen"
                 onChangeText={(text) => { setValue(text) }} value={value} >
             </TextInput>
             <TouchableOpacity style={styles.touch} onPress={handleAddItem}>
-            <AntDesign name="plus" size={32} color="black" />
+            <AntDesign name="pluscircleo" size={44} color="black" />
             </TouchableOpacity>
         </Container>
     )
@@ -35,14 +35,13 @@ const styles = StyleSheet.create({
         fontFamily: 'Telegraf-Regular',
         fontSize: 20,
         textAlign: 'center',
-        width: 200,
+        width: 250,
     },
     placeholder: {
         justifyContent: 'center',
     },
     touch: {
-        padding: 5,
-        borderBottomColor: 'black',
+        padding: 10,
         fontFamily: 'Telegraf-Regular',
         fontSize: 20,
     }

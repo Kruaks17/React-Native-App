@@ -6,6 +6,9 @@ const HeaderText = styled.Text`
     font-family: 'RadioGrotesk-Bold';
 
     margin-top: 50px;
+
+    
+    
 `;
 
 export default HeaderText;

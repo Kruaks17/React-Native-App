@@ -14,7 +14,6 @@ const Main = () => {
 
     const addItem = (item) => {
         setItems([...items, item])
-
     };
     const handleRemove = (index) => {
         setItems(items.filter((items, x) => {
@@ -27,8 +26,9 @@ const Main = () => {
             <Header>
                 <HeaderText> Uppered </HeaderText>
             </Header>
+            <Input key={items.id} addItem={addItem} />
             <List>
-                <Input addItem={addItem} />
+                
                 {items.map((item, index) => {
                     return (
                         <>

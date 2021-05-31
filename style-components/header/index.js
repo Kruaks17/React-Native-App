@@ -12,6 +12,7 @@ const Header = styled.View`
 
     margin-bottom: 40px;
 
+    
 `;
 
 export default Header;

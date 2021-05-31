@@ -1,14 +1,13 @@
 import styled from "styled-components/native";
 
+
 const Container = styled.View` 
 
-    
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
 
-    
-
+    flex-direction: row;
 
 `;
 
